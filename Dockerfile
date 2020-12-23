@@ -1,5 +1,4 @@
-ARG ALPINE_VERSION
-FROM alpine:${ALPINE_VERSION}
+FROM alpine:3.11
 
 ADD src/install.sh install.sh
 RUN sh install.sh && rm install.sh
@@ -13,7 +12,7 @@ ENV PGDUMP_EXTRA_OPTS ''
 ENV S3_ACCESS_KEY_ID ''
 ENV S3_SECRET_ACCESS_KEY ''
 ENV S3_BUCKET ''
-ENV S3_REGION 'us-west-1'
+ENV S3_REGION 'ap-south-1'
 ENV S3_PATH 'backup'
 ENV S3_ENDPOINT ''
 ENV S3_S3V4 'no'
